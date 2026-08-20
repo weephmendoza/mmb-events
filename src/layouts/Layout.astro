@@ -1,0 +1,66 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = "MMB Events" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content="MMB Events is a Philippine event management company specializing in corporate, government, and institutional events."
+    />
+
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --maroon: #7b1215;
+    --gold: #c79a4a;
+    --navy: #234a72;
+    --white: #ffffff;
+    --light: #f7f5f2;
+    --text: #333333;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family:
+      Inter,
+      Arial,
+      Helvetica,
+      sans-serif;
+    color: var(--text);
+    background: white;
+    line-height: 1.6;
+  }
+
+  .container {
+    width: min(1100px, 92%);
+    margin: auto;
+  }
+</style>
